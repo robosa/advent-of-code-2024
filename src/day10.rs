@@ -1,6 +1,5 @@
-use std::collections::HashSet;
-
 use aoc_runner_derive::aoc;
+use std::collections::HashSet;
 
 type Trails = (HashSet<(usize, usize)>, usize);
 

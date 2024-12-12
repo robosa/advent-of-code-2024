@@ -1,6 +1,5 @@
-use std::collections::HashMap;
-
 use aoc_runner_derive::aoc;
+use std::collections::HashMap;
 
 enum TransformedStone {
     One(u64),
