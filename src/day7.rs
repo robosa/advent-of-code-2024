@@ -1,6 +1,6 @@
 use aoc_runner_derive::{aoc, aoc_generator};
 
-pub struct Equation {
+struct Equation {
     result: u64,
     numbers: Vec<u64>,
 }
@@ -35,12 +35,12 @@ fn is_valid2(numbers: &[u64], current: u64, result: u64) -> bool {
 }
 
 #[aoc_generator(day7)]
-pub fn input_generator(input: &str) -> Vec<Equation> {
+fn input_generator(input: &str) -> Vec<Equation> {
     input.lines().map(Equation::new).collect()
 }
 
 #[aoc(day7, part1)]
-pub fn part1(input: &[Equation]) -> u64 {
+fn part1(input: &[Equation]) -> u64 {
     input
         .iter()
         .filter(|e| is_valid(&e.numbers[1..], e.numbers[0], e.result))
@@ -49,7 +49,7 @@ pub fn part1(input: &[Equation]) -> u64 {
 }
 
 #[aoc(day7, part2)]
-pub fn part2(input: &[Equation]) -> u64 {
+fn part2(input: &[Equation]) -> u64 {
     input
         .iter()
         .filter(|e| is_valid2(&e.numbers[1..], e.numbers[0], e.result))

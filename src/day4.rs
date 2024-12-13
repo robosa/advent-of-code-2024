@@ -12,7 +12,7 @@ const DIRS: [(i32, i32); 8] = [
     (1, -1),
 ];
 
-pub struct Grid {
+struct Grid {
     data: Vec<Vec<char>>,
     height: usize,
     width: usize,
@@ -57,12 +57,12 @@ impl Grid {
 }
 
 #[aoc_generator(day4)]
-pub fn input_generator(input: &str) -> Grid {
+fn input_generator(input: &str) -> Grid {
     Grid::new(input)
 }
 
 #[aoc(day4, part1)]
-pub fn part1(input: &Grid) -> usize {
+fn part1(input: &Grid) -> usize {
     (0..input.height)
         .cartesian_product(0..input.width)
         .map(|start| input.count_xmas_at(start))
@@ -70,7 +70,7 @@ pub fn part1(input: &Grid) -> usize {
 }
 
 #[aoc(day4, part2)]
-pub fn part2(input: &Grid) -> usize {
+fn part2(input: &Grid) -> usize {
     (1..input.height - 1)
         .cartesian_product(1..input.width - 1)
         .filter(|&start| input.has_cross_mas(start))

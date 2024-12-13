@@ -34,7 +34,7 @@ fn parse_update(input: &str) -> Vec<u32> {
 }
 
 #[aoc(day5, part1)]
-pub fn part1(input: &str) -> u32 {
+fn part1(input: &str) -> u32 {
     let (rules, updates) = input.split_once("\n\n").unwrap();
     let order = PageOrder::new(rules);
     updates
@@ -46,7 +46,7 @@ pub fn part1(input: &str) -> u32 {
 }
 
 #[aoc(day5, part2)]
-pub fn part2(input: &str) -> u32 {
+fn part2(input: &str) -> u32 {
     let (rules, updates) = input.split_once("\n\n").unwrap();
     let order = PageOrder::new(rules);
     updates

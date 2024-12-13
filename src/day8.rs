@@ -68,11 +68,11 @@ impl Grid {
 }
 
 #[aoc(day8, part1)]
-pub fn part1(input: &str) -> usize {
+fn part1(input: &str) -> usize {
     Grid::new(input).get_first_antinodes().len()
 }
 
 #[aoc(day8, part2)]
-pub fn part2(input: &str) -> usize {
+fn part2(input: &str) -> usize {
     Grid::new(input).get_all_antinodes().len()
 }

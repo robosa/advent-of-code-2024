@@ -43,11 +43,11 @@ fn run(input: &str, steps: usize) -> usize {
 }
 
 #[aoc(day11, part1)]
-pub fn part1(input: &str) -> usize {
+fn part1(input: &str) -> usize {
     run(input, 25)
 }
 
 #[aoc(day11, part2)]
-pub fn part2(input: &str) -> usize {
+fn part2(input: &str) -> usize {
     run(input, 75)
 }

@@ -2,7 +2,7 @@ use aoc_runner_derive::{aoc, aoc_generator};
 use itertools::Itertools;
 use std::collections::HashSet;
 
-pub struct Grid {
+struct Grid {
     data: Vec<Vec<char>>,
     height: usize,
     width: usize,
@@ -120,16 +120,16 @@ where
 }
 
 #[aoc_generator(day12)]
-pub fn input_generator(input: &str) -> Grid {
+fn input_generator(input: &str) -> Grid {
     Grid::new(input)
 }
 
 #[aoc(day12, part1)]
-pub fn part1(input: &Grid) -> usize {
+fn part1(input: &Grid) -> usize {
     run(input, Grid::get_area_and_edges)
 }
 
 #[aoc(day12, part2)]
-pub fn part2(input: &Grid) -> usize {
+fn part2(input: &Grid) -> usize {
     run(input, Grid::get_area_and_corners)
 }

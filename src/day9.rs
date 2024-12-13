@@ -1,7 +1,7 @@
 use aoc_runner_derive::aoc;
 
 #[aoc(day9, part1)]
-pub fn part1(input: &str) -> usize {
+fn part1(input: &str) -> usize {
     let mut data: Vec<_> = input
         .chars()
         .map(|c| c.to_digit(10).unwrap() as usize)
@@ -38,7 +38,7 @@ pub fn part1(input: &str) -> usize {
 }
 
 #[aoc(day9, part2)]
-pub fn part2(input: &str) -> usize {
+fn part2(input: &str) -> usize {
     let mut files = Vec::new();
     let mut spaces = Vec::new();
     let mut index = 0;

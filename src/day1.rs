@@ -14,7 +14,7 @@ fn get_input(input: &str) -> (Vec<u32>, Vec<u32>) {
 }
 
 #[aoc(day1, part1)]
-pub fn part1(input: &str) -> u32 {
+fn part1(input: &str) -> u32 {
     let (mut l1, mut l2) = get_input(input);
     l1.sort();
     l2.sort();
@@ -22,7 +22,7 @@ pub fn part1(input: &str) -> u32 {
 }
 
 #[aoc(day1, part2)]
-pub fn part2(input: &str) -> u32 {
+fn part2(input: &str) -> u32 {
     let (l1, l2) = get_input(input);
     let mut counter = HashMap::new();
     l2.iter().for_each(|&a| *counter.entry(a).or_default() += 1);

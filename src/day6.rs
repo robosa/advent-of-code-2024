@@ -86,7 +86,7 @@ impl Grid {
 }
 
 #[aoc(day6, part1)]
-pub fn part1(input: &str) -> usize {
+fn part1(input: &str) -> usize {
     let grid = Grid::new(input);
     let mut current = Some((grid.start, Direction::Up));
     let mut visited = HashSet::new();
@@ -98,7 +98,7 @@ pub fn part1(input: &str) -> usize {
 }
 
 #[aoc(day6, part2)]
-pub fn part2(input: &str) -> usize {
+fn part2(input: &str) -> usize {
     let mut grid = Grid::new(input);
     let mut pos = grid.start;
     let mut dir = Direction::Up;

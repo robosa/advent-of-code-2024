@@ -3,7 +3,7 @@ use std::collections::HashSet;
 
 type Trails = (HashSet<(usize, usize)>, usize);
 
-pub struct Map {
+struct Map {
     grid: Vec<Vec<u32>>,
     height: usize,
     width: usize,
@@ -100,11 +100,11 @@ impl Map {
 }
 
 #[aoc(day10, part1)]
-pub fn part1(input: &str) -> usize {
+fn part1(input: &str) -> usize {
     Map::new(input).count_dests()
 }
 
 #[aoc(day10, part2)]
-pub fn part2(input: &str) -> usize {
+fn part2(input: &str) -> usize {
     Map::new(input).count_trails()
 }
