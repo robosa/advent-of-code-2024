@@ -73,4 +73,3 @@ fn part2(input: &str) -> usize {
         .map(|design| count_valid_designs(design, &patterns, &mut cache))
         .sum()
 }
-

@@ -154,4 +154,3 @@ fn part2(input: &str) -> usize {
     grid.run(instructions);
     grid.sum_gps()
 }
-

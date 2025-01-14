@@ -149,4 +149,3 @@ fn part2(input: &str) -> u64 {
     }
     panic!()
 }
-

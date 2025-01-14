@@ -51,4 +51,3 @@ fn part2(input: &[Option<u64>]) -> u16 {
     }
     *sequences_total.values().max().unwrap()
 }
-
